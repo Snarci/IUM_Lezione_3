@@ -50,7 +50,7 @@ public class GeneratorSym {
                 )
         );
         for(int i=0; i< sectors;i++){
-            out.add(filled.get(i));
+            out.add(filled.get((int)(Math.random() * ( 19 )) ));
         }
         return out;
     }
