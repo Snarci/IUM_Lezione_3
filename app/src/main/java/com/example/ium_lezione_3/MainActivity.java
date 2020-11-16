@@ -16,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         PieChartView pieChart =this.findViewById(R.id.piechart);
-        Float[] percent = new Float[]{40.0f,20.0f,20.0f,20.0f};
+        GeneratorSym generatorSym=new GeneratorSym();
         Integer[] colors = new Integer[]{0xffedf8fb,0xffb2e2e2,0xff66c2a4,0xff66c2a4};
-        pieChart.setPercent(Arrays.asList(percent));
-        pieChart.setSegmentColor(Arrays.asList(colors));
+        pieChart.setPercent(generatorSym.fillPercent());
+        pieChart.setSegmentColor(generatorSym.fillColors());
 
         pieChart.setRadadius(300);
         pieChart.setStrokeColor(Color.BLACK);
